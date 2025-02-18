@@ -1,0 +1,33 @@
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "登录 - PM International";
+
+<Layout title={title}>
+  <Navbar />
+  <main>
+    <section class="auth-section">
+      <div class="container">
+        <h1>登录</h1>
+        <form class="auth-form">
+          <div class="form-group">
+            <label for="email">邮箱</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">密码</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button type="submit" class="cta-button">登录</button>
+          <p class="auth-link">还没有账号？ <a href="/register">立即注册</a></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  /* 样式代码 */
+</style>
